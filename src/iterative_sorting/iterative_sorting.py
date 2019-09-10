@@ -23,7 +23,24 @@ def selection_sort(arr):
     return arr
 
 
-print(selection_sort([7, 2, 9, 1, 3, 6, 0, 10]))
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        currentNum = arr[i]
+        k = 0
+        for j in range(i-1, -2, -1):
+            k = j
+            if(arr[j] > currentNum):
+                arr[j+1] = arr[j]
+            else:
+                break
+        arr[k+1] = currentNum
+    return arr
+
+
+print(insertion_sort([2, 1, 0, 4, 9, 6]))
+
+
+# print(selection_sort([7, 2, 9, 1, 3, 6, 0, 10]))
 
 
 # TO-DO:  implement the Bubble Sort function below
@@ -38,7 +55,8 @@ def bubble_sort(arr):
     return arr
 
 
-print(bubble_sort([7, 2, 9, 1, 3]))
+# print(bubble_sort([7, 2, 9, 1, 3]))
+
 
 # STRETCH: implement the Count Sort function below
 
